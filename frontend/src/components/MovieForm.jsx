@@ -161,6 +161,8 @@ export default class MovieForm extends Component {
 			? 'ui form loading'
 			: 'ui form';
 
+		const starsString = data.stars.join(',');
+
 		return (
 			<div className="six wide column">
 				<form
@@ -331,7 +333,7 @@ export default class MovieForm extends Component {
 							id="stars"
 							name="stars"
 							placeholder="Movie Stars"
-							value={data.stars.join(',')}
+							value={starsString}
 							onChange={this.handleStarsChange}
 						/>
 						<FormInlineMessage
